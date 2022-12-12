@@ -1,0 +1,34 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Update Employee Details</mat-card-title>      
+  </mat-card-header>
+  
+  <mat-card-content>
+      <form class="example-form" (ngSubmit)="onSubmit()">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>ID</mat-label>
+          <input type="number" matInput  value="" id="id" [(ngModel)]="employee.id" name="id">              
+        </mat-form-field> 
+          <mat-form-field class="example-full-width" appearance="fill" >
+            <mat-label>Name</mat-label>
+            <input type="text" matInput  value="" id="name" [(ngModel)]="employee.name" name="name" >              
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Address</mat-label>
+              <textarea  matInput  id="Address" [(ngModel)]="employee.address" name="Address" ></textarea>
+            </mat-form-field> 
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>email</mat-label>
+              <input type="email" matInput  value="" id="id" [(ngModel)]="employee.email" name="email">              
+            </mat-form-field>
+                 
+          <mat-card-actions>
+              <div class="example-button-row">
+                 <button mat-raised-button color="primary" (click)="updateEmployee(employee.id)" >Update</button> 
+                  <button mat-raised-button color="warn"  (click)="cancelEmployee()">cancel</button>   
+                </div>
+          </mat-card-actions>
+        </form>
+  </mat-card-content>
+  
+</mat-card>
